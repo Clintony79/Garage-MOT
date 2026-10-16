@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ SEO — Page Title & Description (EDIT THESE!) -->
+  <title>Your Garage — MOT, Servicing & Tyres in Morden</title>
+  <meta name="description" content="Local DVSA-approved garage in Morden. MOT testing, car servicing and tyres. Fair prices. No hidden fees. Book online or call 020 8555 1234.">
+  <meta name="keywords" content="MOT test Morden, car servicing Morden, tyres fitted Morden, brake repairs Wimbledon, local garage SW19, vehicle servicing South West London, DVSA MOT centre">
+
+  <!-- ✅ SEO — Location Tags -->
+  <meta name="geo.region" content="GB-ENG">
+  <meta name="geo.placename" content="Morden">
+  <meta name="geo.position" content="51.4042;-0.1942">
+  <meta name="ICBM" content="51.4042, -0.1942">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Lora&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-ink: #000000;
+      --color-paper: #ffffff;
+      --color-char: #1c1c1c;
+      --color-midnight: #070707;
+      --color-mist: #e5e4e4;
+      --color-smoke: #8d8d8d;
+      --color-ember: #b75928;
+      --color-primary-action-fill: #494949;
+      --font-sans: 'Montserrat', sans-serif;
+      --font-serif: 'Lora', serif;
+      --spacing-8: 8px;
+      --spacing-12: 12px;
+      --spacing-16: 16px;
+      --spacing-24: 24px;
+      --spacing-32: 32px;
+      --spacing-48: 48px;
+      --spacing-64: 64px;
+      --spacing-80: 80px;
+      --radius-cards: 8px;
+      --radius-badges: 1584px;
+      --radius-buttons: 80px;
+      --page-max-width: 1200px;
+      --section-gap: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: 0.15px;
+      color: var(--color-ink);
+      background: var(--color-paper);
+    }
+
+    .container {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-24);
+    }
+
+    .nav-wrapper {
+      position: fixed;
+      top: var(--spacing-24);
+      right: var(--spacing-24);
+      z-index: 100;
+    }
+
+    .nav-pill {
+      background: var(--color-char);
+      border-radius: var(--radius-badges);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-paper);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12px;
+      cursor: pointer;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-left: 4px;
+    }
+
+    .hamburger span {
+      width: 14px;
+      height: 1.5px;
+      background: var(--color-paper);
+    }
+
+    .hero {
+      height: 100vh;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1503376780307-159b7a86b0b0?w=1920&q=80') center center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--spacing-64) var(--spacing-48);
+    }
+
+    .hero-top { max-width: 400px; }
+    .hero-top p { color: var(--color-paper); font-size: 15px; line-height: 1.5; }
+
+    .brand-wordmark {
+      font-size: clamp(72px, 16vw, 168px);
+      font-weight: 300;
+      line-height: 0.8;
+      letter-spacing: -0.025em;
+      color: var(--color-paper);
+    }
+    .brand-wordmark span { color: var(--color-ember); }
+
+    section { padding: var(--spacing-80) 0; }
+
+    .section-label {
+      font-size: 12px;
+      color: var(--color-smoke);
+      letter-spacing: 0.12px;
+      margin-bottom: var(--spacing-8);
+      display: block;
+    }
+
+    .section-heading {
+      font-size: clamp(32px, 6vw, 62px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--spacing-32);
+    }
+    .section-heading span { color: var(--color-ember); }
+
+    .body-text {
+      max-width: 600px;
+      font-size: 15px;
+      margin-bottom: var(--spacing-24);
+    }
+
+    .serif-text {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .text-arrow-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+    .text-arrow-btn:hover { gap: 12px; color: var(--color-ember); }
+    .text-arrow-btn.dark { color: var(--color-paper); }
+
+    .filled-btn {
+      display: inline-block;
+      background: var(--color-char);
+      color: var(--color-paper);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 19px 32px;
+      border-radius: var(--radius-buttons);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .filled-btn:hover { background: var(--color-primary-action-fill); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-16);
+      margin-top: var(--spacing-32);
+    }
+
+    .service-card {
+      background: var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      transition: transform 0.2s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); }
+    .service-card h3 { font-size: 22px; font-weight: 400; margin-bottom: var(--spacing-12); }
+    .service-card p { font-size: 14px; color: var(--color-smoke); margin-bottom: var(--spacing-16); }
+
+    .badge {
+      display: inline-block;
+      background: #193f32;
+      color: var(--color-paper);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-badges);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .numbered-list { max-width: 600px; margin-top: var(--spacing-32); }
+    .numbered-item {
+      padding: var(--spacing-24) 0;
+      border-top: 1px solid var(--color-mist);
+      display: flex;
+      gap: var(--spacing-24);
+      align-items: flex-start;
+    }
+    .number { font-size: 12px; color: var(--color-smoke); min-width: 24px; }
+    .numbered-item h4 { font-size: 18px; font-weight: 400; margin-bottom: 4px; }
+    .numbered-item p { font-size: 14px; color: var(--color-smoke); }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-16);
+      margin-top: var(--spacing-48);
+    }
+
+    .feature-card-light {
+      background: var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+    }
+
+    .feature-card-image {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d4?w=800&q=80') center center / cover no-repeat;
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      color: var(--color-paper);
+    }
+
+    .feature-label { font-size: 12px; opacity: 0.7; margin-bottom: var(--spacing-8); }
+    .feature-heading {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .booking-section {
+      background: var(--color-mist);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-48);
+      margin-top: var(--spacing-48);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-16);
+      margin-top: var(--spacing-24);
+    }
+    .form-full { grid-column: 1 / -1; }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--color-smoke);
+      border-radius: var(--radius-cards);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      background: var(--color-paper);
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--color-ember);
+    }
+
+    footer {
+      background: var(--color-char);
+      color: var(--color-paper);
+      padding: var(--spacing-64) 0 var(--spacing-32);
+      margin-top: var(--spacing-80);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-32);
+    }
+
+    .footer-col h4 { font-size: 15px; font-weight: 500; margin-bottom: var(--spacing-16); }
+    .footer-col p, .footer-col a {
+      font-size: 13px;
+      color: var(--color-smoke);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .footer-col a:hover { color: var(--color-ember); }
+
+    .copyright {
+      margin-top: var(--spacing-48);
+      padding-top: var(--spacing-24);
+      border-top: 1px solid #262626;
+      font-size: 12px;
+      color: var(--color-smoke);
+    }
+
+    @media (max-width: 768px) {
+      .services-grid, .feature-grid, .form-grid, .footer-grid { grid-template-columns: 1fr; }
+      .brand-wordmark { font-size: 72px; }
+      .hero { padding: var(--spacing-32) var(--spacing-24); }
+      .booking-section { padding: var(--spacing-24); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div class="nav-wrapper">
+    <div class="nav-pill" onclick="alert('Menu would open here')">
+      MENU
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-top">
+      <p>Established in Merton. Professional vehicle servicing, MOT testing and tyres — all under one roof.</p>
+    </div>
+    <div class="hero-bottom">
+      <h1 class="brand-wordmark">YOUR<span>.</span>GARAGE</h1>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section>
+    <div class="container">
+      <span class="section-label">About us</span>
+      <h2 class="section-heading">Trusted across <span>Merton</span> since 2012</h2>
+      <p class="body-text">We are a local, independent garage dedicated to keeping your vehicle running safely and efficiently. From routine maintenance to MOT preparation and tyre replacement, our experienced team delivers honest, high-quality workmanship at fair prices.</p>
+      <p class="serif-text">"Our reputation is built on transparency. We quote before we work, we show you what we find, and we never carry out work without your approval."</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section>
+    <div class="container">
+      <span class="section-label">What we do</span>
+      <h2 class="section-heading">Expert care for <span>your vehicle</span></h2>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="badge">Essential</span>
+          <h3>MOT Testing</h3>
+          <p>DVSA-approved MOT centre. Same-day appointments available. We'll advise on repairs before they become failures.</p>
+          <a href="#booking" class="text-arrow-btn">Book MOT →</a>
+        </div>
+        <div class="service-card">
+          <span class="badge">Maintenance</span>
+          <h3>Full & Interim Servicing</h3>
+          <p>Manufacturer-compliant service schedules using quality parts. Protect your warranty and maintain your vehicle's value.</p>
+          <a href="#booking" class="text-arrow-btn">Book service →</a>
+        </div>
+        <div class="service-card">
+          <span class="badge">Safety</span>
+          <h3>Tyres & Fitting</h3>
+          <p>Wide range of budget, mid-range and premium tyres in stock. Computerised balancing and wheel alignment.</p>
+          <a href="#tyres" class="text-arrow-btn">View prices →</a>
+        </div>
+        <div class="service-card">
+          <span class="badge">Repairs</span>
+          <h3>General Repairs</h3>
+          <p>Brakes, exhausts, suspension, diagnostics — all carried out by qualified technicians with latest equipment.</p>
+          <a href="#booking" class="text-arrow-btn">Request quote →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section>
+    <div class="container">
+      <span class="section-label">Simple process</span>
+      <h2 class="section-heading">Getting started</h2>
+      
+      <div class="numbered-list">
+        <div class="numbered-item">
+          <span class="number">01</span>
+          <div>
+            <h4>Choose your service</h4>
+            <p>Select MOT, service, tyres or a specific repair — and pick a time that suits you.</p>
+          </div>
+        </div>
+        <div class="numbered-item">
+          <span class="number">02</span>
+          <div>
+            <h4>We get to work</h4>
+            <p>Our technicians carry out the work. If extra items come up, we call you first — no surprises.</p>
+          </div>
+        </div>
+        <div class="numbered-item">
+          <span class="number">03</span>
+          <div>
+            <h4>Drive away with confidence</h4>
+            <p>You get a full report, clear pricing, and the peace of mind that your car is in safe hands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section>
+    <div class="container">
+      <span class="section-label">Why choose us</span>
+      <h2 class="section-heading">Professional. Local. <span>Trusted.</span></h2>
+      
+      <div class="feature-grid">
+        <div class="feature-card-light">
+          <div>
+            <p class="feature-label">Transparent pricing</p>
+            <h3 class="feature-heading">Fixed prices. No hidden extras.</h3>
+          </div>
+          <a href="#pricing" class="text-arrow-btn">View price list →</a>
+        </div>
+        <div class="feature-card-image">
+          <div>
+            <p class="feature-label">Online booking</p>
+            <h3 class="feature-heading">Reserve your slot anytime</h3>
+          </div>
+          <a href="#booking" class="text-arrow-btn dark">Book now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form — ✅ Formspree Ready -->
+  <section id="booking">
+    <div class="container">
+      <span class="section-label">Make an appointment</span>
+      <h2 class="section-heading">Book your visit</h2>
+      
+      <div class="booking-section">
+        <p class="body-text">Fill in your details below and we'll confirm your appointment within 2 hours during business hours.</p>
+        
+        <!-- ⚠️ IMPORTANT: Replace the URL below with YOUR Formspree endpoint from formspree.io -->
+        <form action="https://formspree.io/f/REPLACE_WITH_YOUR_CODE" method="POST" class="form-grid">
+          <div>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div>
+            <input type="tel" name="phone" placeholder="Phone number" required>
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="Email address">
+          </div>
+          <div>
+            <input type="text" name="vehicle" placeholder="Vehicle registration">
+          </div>
+          <div>
+            <select name="service" required>
+              <option value="">Select service</option>
+              <option value="mot">MOT Testing</option>
+              <option value="service-interim">Interim Service</option>
+              <option value="service-full">Full Service</option>
+              <option value="tyres">Tyres / Wheel Alignment</option>
+              <option value="repair">General Repair / Diagnostics</option>
+            </select>
+          </div>
+          <div>
+            <input type="date" name="preferred-date" required>
+          </div>
+          <div class="form-full">
+            <textarea name="notes" rows="4" placeholder="Any additional notes or concerns about your vehicle"></textarea>
+          </div>
+          <div class="form-full">
+            <button type="submit" class="filled-btn">Request Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Your.Garage</h4>
+          <p>Unit 7<br>Merton Industrial Estate<br>London, SW19 5TY</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:02085551234">020 8555 1234</a>
+          <a href="mailto:hello@yourgarage.co.uk">hello@yourgarage.co.uk</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <p>Mon–Fri: 8:30 – 17:30</p>
+          <p>Sat: 8:30 – 13:00</p>
+          <p>Sun: Closed</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <a href="#booking">Book online</a>
+          <a href="#pricing">Price list</a>
+          <a href="#tyres">Tyres in stock</a>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Your Garage. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
